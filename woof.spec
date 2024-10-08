@@ -1,11 +1,11 @@
 Name:           woof
-Version:        14.2.0
+Version:        14.5.0
 Release:        %autorelease
 Summary:        A continuation of the MBF source port for modern systems
 
 License:        GPLv2+
-URL:            https://github.com/fabiangraffrath/woof
-Source0:        https://github.com/fabiangreffrath/woof/archive/refs/tags/woof_14.2.0.tar.gz
+URL:            https://github.com/fabiangreffrath/woof
+Source0:        https://github.com/fabiangreffrath/woof/archive/refs/tags/woof_14.5.0.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  make
@@ -31,8 +31,7 @@ To achieve this goal, this source port is less strict regarding its faithfulness
 In summary, this project's goal is to fast-forward MBF.EXE from DOS to 21st century and remove all the stumbling blocks on the way. Furthermore, just as MBF was ahead of its time, this project dedicates itself to early adoption of new modding features such as DEHEXTRA+DSDHacked, UMAPINFO and MBF21.
 
 %prep
-%setup -n woof-woof_14.2.0
-
+%setup -n woof-woof_14.5.0
 
 %build
 %cmake -B build -DCMAKE_BUILD_TYPE=Release
@@ -48,5 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/*
 
 %changelog
+* Tue Oct 08 2024 Danilo Soares <deudzdev@gmail.com> - 14.5.0
+- Bump version to 14.5.0
+
 * Sun Mar 10 2024 Danilo Soares <deudzdev@gmail.com> - 14.2.0
 - Initial release
